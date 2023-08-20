@@ -1,5 +1,5 @@
 #include "swap.h"
-
+#include<time.h>
 //bubble sort  in ascending order
 
 int *bubblesort(int *array, int size){
