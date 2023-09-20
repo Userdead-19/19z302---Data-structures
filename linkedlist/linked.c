@@ -140,3 +140,45 @@ struct node *getnode(int data){
 int main(){
     struct node *element1=getnode(10);
 }
+
+//insert at beginning in double linked list 
+
+struct node *insertatbeginning(struct node *head,int data){
+    struct node *new=getnode(data);
+    new->next=head;
+    new->previous=NULL;
+    head->previous=new;
+    head=new;
+    return head;
+}
+
+
+//insert at end in double linked list
+
+
+struct node *insertatend(struct node *head,int data){
+    struct node *new=getnode(data);
+    struct node *temp=head;
+    while(temp->next!=NULL){
+        temp=temp->next;
+    }
+    temp->next=new;
+    new->previous=temp;
+    new->next=NULL;
+    return head;
+}
+
+
+//insert after node x
+
+struct node *insertafternode(struct node *head,int data,int x){
+    struct node *new=getnode(data);
+    struct node *temp=head;
+    while(temp->data!=x){
+        temp=temp->next;
+    }
+    new->next=temp->next;
+    new->previous=temp;
+    temp->next=new;
+    return head;
+}
