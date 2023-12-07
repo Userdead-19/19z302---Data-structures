@@ -29,7 +29,7 @@ int dequeue(int *arr, int *front, int *rear, int size) {
     }
     int data = arr[*front];
     if (*front == *rear) {
-        *front = -1;
+        *front = -1;    
         *rear = -1;
     } else {
         *front = (*front + 1) % size;

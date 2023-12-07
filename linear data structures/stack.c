@@ -15,8 +15,6 @@ struct stack{
 };
 
 
-
-
 void main(){
     printf("Enter the size of the stack:");
     int n;
